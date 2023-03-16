@@ -25,13 +25,7 @@ public class TCPTestClient : MonoBehaviour {
 	// Use this for initialization 	
 	void Start () {
 		ConnectToTcpServer();
-        /*
-        objectStates = new bool[2];
-        for (int i = 0; i < objectStates.Length; i++)
-        {
-            objectStates[i] = false;
-        }
-        */
+
 
     }  	
 	
@@ -133,34 +127,7 @@ public class TCPTestClient : MonoBehaviour {
 				// Write byte array to socketConnection stream.                 
 				stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);                 
 				Debug.Log("Client sent his message - should be received by server");     
-                /*
-                // Create a dictionary to send
-                Dictionary<string, object> dict = new Dictionary<string, object>();
-                dict.Add("key1", "value1");
-                dict.Add("key2", 42);
-                dict.Add("key3", true);
 
-                // Convert the dictionary to a JSON string
-                string jsonString = JsonUtility.ToJson(dict);
-
-                // Convert the JSON string to a byte array
-                byte[] jsonBytes = Encoding.UTF8.GetBytes(jsonString);
-                
-
-                Player playerInstance = new Player();
-                playerInstance.playerId = "8484239823";
-                playerInstance.playerLoc = "Powai";
-                playerInstance.playerNick = "Random Nick";
-
-
-                //Convert to JSON
-                string playerToJson = JsonUtility.ToJson(playerInstance);
-               // Debug.Log(playerToJson);
-                byte[] jsonBytes = Encoding.UTF8.GetBytes(playerToJson);
-
-                // Send the byte array over the network
-                stream.Write(jsonBytes, 0, jsonBytes.Length);
-                */
             }         
 		} 		
 		catch (SocketException socketException) {             
