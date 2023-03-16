@@ -70,7 +70,7 @@ public class TCPTestClient : MonoBehaviour {
 	/// Runs in background clientReceiveThread; Listens for incomming data. 	   
 	private void ListenForData() { 		
 		try { 			
-			socketConnection = new TcpClient("127.0.0.1", 8080);  			
+			socketConnection = new TcpClient("xx.xxx.xxx.xxx", 8080);  			
 			Byte[] bytes = new Byte[1024];             
 			while (true) { 				
 				// Get a stream object for reading 				
