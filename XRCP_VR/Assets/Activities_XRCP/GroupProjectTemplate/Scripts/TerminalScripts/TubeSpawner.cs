@@ -21,11 +21,15 @@ public class TubeSpawner : MonoBehaviour
     //---------------------
     void Update()
     {
+        //------------Debugging using UI--------------------
         if (ui.sliderValue == 1 && canSpawnTube)
         {
             Instantiate(prefab, startPosition.transform.position, Quaternion.Euler(-90f, 0f, 0f));
 
             canSpawnTube = false;
+            ui.sliderValue = 0;
+            canSpawnTube = true;
+            tubeCount++;
         }
     }
 
