@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 231
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -333,7 +333,7 @@ PrefabInstance:
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 147.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -546,9 +546,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd268bd7f694394983e52e03efd8515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {fileID: 0}
-  obj: {fileID: 0}
-  prefab: {fileID: 0}
+  startPosition: {fileID: 939074430}
+  obj: {fileID: 2132692467}
+  prefab: {fileID: 5853539463556112034, guid: 5d410415341d4f14b9a267787007c802, type: 3}
   canSpawnTube: 1
   tubeCount: 0
 --- !u!1 &186317173
@@ -651,7 +651,7 @@ MonoBehaviour:
   callColourChange: {fileID: 1120082307}
   callColourChange2: {fileID: 1192548844}
   tubeSpawner: {fileID: 0}
-  tubeSpawnerMinistry: {fileID: 64501590}
+  tubeSpawnerMinistry: {fileID: 0}
   dynamicMessages: {fileID: 0}
 --- !u!4 &325915119 stripped
 Transform:
@@ -1301,6 +1301,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8164705571879959090, guid: fad94b617f0540568dbf4c9c4011248c,
     type: 3}
   m_PrefabInstance: {fileID: 887569235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &939074430 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8211974571945108517, guid: cb63e326dbe336f4091e68e83ab16819,
+    type: 3}
+  m_PrefabInstance: {fileID: 64501587}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &949975319
 GameObject:
