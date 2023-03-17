@@ -57,7 +57,7 @@ public class TCPTestClient : MonoBehaviour {
             else if (lastAction == "task complete")
             {
                 Debug.Log("worker completed task");
-               // dynamicMessages.MessageSubmitted();
+                dynamicMessages.MessageSubmitted();
                // tubeSpawnerMinistry.spawnTubeMinistry();
             }
             else
@@ -75,6 +75,7 @@ public class TCPTestClient : MonoBehaviour {
 			clientReceiveThread.IsBackground = true; 			
 			clientReceiveThread.Start();
             Debug.Log("connected");
+            SendMessage("unity is here");
 		} 		
 		catch (Exception e) { 			
 			Debug.Log("On client connect exception " + e); 		
@@ -129,7 +130,8 @@ public class TCPTestClient : MonoBehaviour {
 	/// </summary> 	
 	private void SendMessage(string msgToSend) {
         Debug.Log("Sending Message");
-		if (socketConnection == null) {             
+		if (socketConnection == null) {
+            Debug.Log("socket not connected");
 			return;         
 		}  		
 		try { 			

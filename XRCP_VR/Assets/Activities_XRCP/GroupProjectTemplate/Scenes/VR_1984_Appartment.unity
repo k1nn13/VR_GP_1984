@@ -1584,18 +1584,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1930339049}
-        m_TargetAssemblyTypeName: dynamicText, Assembly-CSharp
-        m_MethodName: displayMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 470195019}
         m_TargetAssemblyTypeName: ComputerUI_Controller, Assembly-CSharp
         m_MethodName: socketCheck
@@ -1618,6 +1606,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1930339049}
+        m_TargetAssemblyTypeName: dynamicText, Assembly-CSharp
+        m_MethodName: displayMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'Tube entered into socket. '
           m_BoolArgument: 1
         m_CallState: 2
   m_SelectExited:
@@ -2112,7 +2112,7 @@ MonoBehaviour:
   tubeSpawner: {fileID: 8211974571247965372, guid: cb63e326dbe336f4091e68e83ab16819,
     type: 3}
   tubeSpawnerMinistry: {fileID: 0}
-  dynamicMessages: {fileID: 0}
+  dynamicMessages: {fileID: 1930339049}
 --- !u!1 &414279971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -36156634322454542, guid: 28d6f0f1965597b41b2e9caf8428604b,
@@ -2551,6 +2551,81 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PneumaticTubeOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1930339049}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 382021208}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: displayMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: NewAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: dynamicText, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TCPTestClient, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Your response has been submitted to Big Brother. Await his response.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: apartment sent a tube
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241135, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
@@ -6093,6 +6168,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343a26cfaf8cfec4d91a79eb9266095c, type: 3}
+--- !u!1 &1322852969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 732877344778758186, guid: fd28f23af44f73f4a95e33435872ad15,
+    type: 3}
+  m_PrefabInstance: {fileID: 1278401428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1324756794
 GameObject:
   m_ObjectHideFlags: 0
@@ -6817,12 +6898,25 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1278401428}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1322852969}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1588313572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322852969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6196fdfea17c13a47aa1e6f6d6cd7572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tcpTestClient: {fileID: 382021208}
 --- !u!4 &1624070659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8211974571247965371, guid: cb63e326dbe336f4091e68e83ab16819,
@@ -8003,7 +8097,7 @@ MonoBehaviour:
   - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
     to put it down."
   currentJoke: 
-  sendTCP: {fileID: 0}
+  sendTCP: {fileID: 1588313572}
 --- !u!1 &1938202989
 GameObject:
   m_ObjectHideFlags: 0

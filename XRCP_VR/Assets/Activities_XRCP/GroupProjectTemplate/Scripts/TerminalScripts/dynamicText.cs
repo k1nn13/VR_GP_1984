@@ -71,8 +71,8 @@ public class dynamicText : MonoBehaviour
     {
         int index = Random.Range(0, jokes.Length);
         currentJoke = jokes[index];
-        // textContainer.text = input;
-        textContainer.text = currentJoke;
+        textContainer.text = input;
+       // textContainer.text = currentJoke;
     }
 
     
