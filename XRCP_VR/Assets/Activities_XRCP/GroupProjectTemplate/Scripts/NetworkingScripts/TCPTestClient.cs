@@ -18,6 +18,8 @@ public class TCPTestClient : MonoBehaviour {
     public SphereMaterialChanger callColourChange;
     public SphereMaterialChanger2 callColourChange2;
     public TubeSpawner tubeSpawner;
+    public TubeSpawnerMinistry tubeSpawnerMinistry;
+    public dynamicText dynamicMessages;
     private string lastAction = "waiting";
     #region private members 	
     private TcpClient socketConnection; 	
@@ -52,7 +54,13 @@ public class TCPTestClient : MonoBehaviour {
                 Debug.Log("spawn tube called");
                 tubeSpawner.spawnTube();
             }
-                else
+            else if (lastAction == "task complete")
+            {
+                Debug.Log("worker completed task");
+               // dynamicMessages.MessageSubmitted();
+              // tubeSpawnerMinistry.spawnTubeMinistry();
+            }
+            else
                 {
                     Debug.Log("last action wasn't recognised");
                 }

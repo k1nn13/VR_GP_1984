@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class dynamicText : MonoBehaviour
 {
     public Text textContainer;
+    public bool socketStateNow;
     // Array of short jokes
     public string[] jokes = new string[20] {
         "Why don’t scientists trust atoms? Because they make up everything.",
@@ -32,10 +33,12 @@ public class dynamicText : MonoBehaviour
 
     // Variable to store the random joke
     public string currentJoke;
+    public SendTCPMessage sendTCP;
 
 
     void Start()
     {
+        socketStateNow = false;
         // Initialize textContainer with starting text
         textContainer.text = "You have entered the Ministry of Truth. Complete your assigned tasks by inserting the tubes into the P Drive.";
     }
@@ -45,6 +48,25 @@ public class dynamicText : MonoBehaviour
   
     }
 
+    public void updateSocketState(bool state)
+    {
+        socketStateNow = state;
+    }
+
+    public void MessageSubmitted()
+    {
+        if (socketStateNow == true)
+        {
+            textContainer.text = "Task completed";
+            sendTCP.SendMessage("task complete");
+
+        } else
+        {
+            textContainer.text = "You have not completed the task. Put the tube in the P Drive.";
+        }
+       
+    }
+
     public void displayMessage(string input)
     {
         int index = Random.Range(0, jokes.Length);
@@ -52,4 +74,7 @@ public class dynamicText : MonoBehaviour
         // textContainer.text = input;
         textContainer.text = currentJoke;
     }
+
+    
+
 }

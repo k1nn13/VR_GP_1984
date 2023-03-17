@@ -6,6 +6,7 @@ public class SocketChecking : MonoBehaviour
 {
 
     XRSocketInteractor socket;
+    public bool socketStare = false;
 
     void Start()
     {
