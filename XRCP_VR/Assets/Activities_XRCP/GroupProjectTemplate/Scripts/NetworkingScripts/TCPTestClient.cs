@@ -17,6 +17,7 @@ public class TCPTestClient : MonoBehaviour {
     public bool controlState = false;
     public SphereMaterialChanger callColourChange;
     public SphereMaterialChanger2 callColourChange2;
+    public TubeSpawner tubeSpawner;
     private string lastAction = "waiting";
     #region private members 	
     private TcpClient socketConnection; 	
@@ -46,6 +47,11 @@ public class TCPTestClient : MonoBehaviour {
                     Debug.Log("sphere 2 was triggered");
                     callColourChange2.changeColour2();
             }
+                else if (lastAction == "spawn tube")
+            {
+                Debug.Log("spawn tube called");
+                tubeSpawner.spawnTube();
+            }
                 else
                 {
                     Debug.Log("last action wasn't recognised");
@@ -69,9 +75,12 @@ public class TCPTestClient : MonoBehaviour {
 	/// <summary> 	
 	/// Runs in background clientReceiveThread; Listens for incomming data. 	   
 	private void ListenForData() { 		
-		try { 			
-			socketConnection = new TcpClient("xx.xxx.xxx.xxx", 8080);  			
-			Byte[] bytes = new Byte[1024];             
+		try {
+            //socketConnection = new TcpClient("51.144.101.111", 8080);  
+
+            socketConnection = new TcpClient("127.0.0.1", 8080);
+
+            Byte[] bytes = new Byte[1024];             
 			while (true) { 				
 				// Get a stream object for reading 				
 				using (NetworkStream stream = socketConnection.GetStream()) { 					
