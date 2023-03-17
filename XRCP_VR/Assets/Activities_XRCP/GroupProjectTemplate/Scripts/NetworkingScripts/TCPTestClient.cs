@@ -58,7 +58,7 @@ public class TCPTestClient : MonoBehaviour {
             {
                 Debug.Log("worker completed task");
                // dynamicMessages.MessageSubmitted();
-              // tubeSpawnerMinistry.spawnTubeMinistry();
+               // tubeSpawnerMinistry.spawnTubeMinistry();
             }
             else
                 {
