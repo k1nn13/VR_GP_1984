@@ -10,49 +10,52 @@ public class TubeSpawner : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] GameObject obj;
-     ComputerUI_Controller ui, uiTest;
+    ComputerUI_Controller ui, uiTest;
 
     [Header("Output")]
     public bool canSpawnTube = false;
     public int tubeCount = 0;
+
+
+    static PlaySound playSound;
+    static bool canTriggerSound = false;
+
+
+
+
     //--------------------
     void Start()
     {
         ui = obj.GetComponent<ComputerUI_Controller>();
-        tubeCount = 0;
+        playSound = gameObject.GetComponent<PlaySound>();
 
-        //Debug.Log(ui);
+        tubeCount = 0;
     }
 
-    //---------------------
-    void Update()
+    private void Update()
     {
-        //------------Debugging using UI--------------------
-        //if (ui.sliderValue == 1 && canSpawnTube)
+        //if (canTriggerSound)
         //{
-        //    Instantiate(prefab, startPosition.transform.position, Quaternion.Euler(-90f, 0f, 0f));
-
-        //    canSpawnTube = false;
-        //    ui.sliderValue = 0;
-        //    canSpawnTube = true;
-        //    tubeCount++;
+        //    playSound.TriggerSound();
         //}
 
 
+
     }
 
-    public void Test()
+    public void AudioTrigger()
     {
    
+  
     }
 
-
-
+    //---------------------
     public void spawnTube()
     {
         uiTest = FindObjectOfType<ComputerUI_Controller>();
+        playSound.TriggerSound();
+        canTriggerSound = true;
 
-        
         //obj = Instantiate(prefab, startPosition.transform.position, Quaternion.Euler(-90f, 0f, 0f));
         //var component = obj.AddComponent<CustomComponent>();
         //component.uniqueValue = tubeCount;
@@ -65,7 +68,7 @@ public class TubeSpawner : MonoBehaviour
 
         uiTest.UpdateTubeCount();
 
- 
+        
     }
 
 
