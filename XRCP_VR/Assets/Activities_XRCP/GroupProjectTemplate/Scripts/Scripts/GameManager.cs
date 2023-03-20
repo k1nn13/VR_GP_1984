@@ -92,19 +92,19 @@ public class GameManager : MonoBehaviour
     private void HandleBeginning()
     {
         //Maybe there's something specific you need to do in code here.
-        sceneLoader.GoToSceneAsync("0_StoryExampleScene");
+        sceneLoader.GoToSceneAsync("VR_1984_Launch");
     }
 
     private void HandleMiddle()
     {
         //Maybe there's something specific you need to do in code here.
-        sceneLoader.GoToSceneAsync("1_StoryExampleScene");
+        sceneLoader.GoToSceneAsync("VR_1984_Ministry");
     }
 
     private void HandleEnd()
     {
         //Maybe there's something specific you need to do in code here.
-        sceneLoader.GoToSceneAsync("ExampleTeamMateScene");
+        sceneLoader.GoToSceneAsync("VR_1984_Appartment");
     }
 
 
