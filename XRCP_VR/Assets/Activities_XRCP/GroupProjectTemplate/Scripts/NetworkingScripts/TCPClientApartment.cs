@@ -11,12 +11,12 @@ using UnityEngine;
 
 
 
-public class TCPTestClient : MonoBehaviour {
-    public float updateInterval = 3.0f;
-    private float nextUpdateTime = 0.0f;
+public class TCPClientApartment : MonoBehaviour {
+   // public float updateInterval = 3.0f;
+  //  private float nextUpdateTime = 0.0f;
     public bool controlState = false;
-    public SphereMaterialChanger callColourChange;
-    public SphereMaterialChanger2 callColourChange2;
+//    public SphereMaterialChanger callColourChange;
+//    public SphereMaterialChanger2 callColourChange2;
     public TubeSpawner tubeSpawner;
     public TubeSpawnerMinistry tubeSpawnerMinistry;
     public dynamicText dynamicMessages;
@@ -39,6 +39,7 @@ public class TCPTestClient : MonoBehaviour {
         if (controlState == true)
         {
             Debug.Log("control state is true, update launched");
+            /*
                 if (lastAction == "sphere")
                 {
                     Debug.Log("calling first sphere colour change");
@@ -49,10 +50,16 @@ public class TCPTestClient : MonoBehaviour {
                     Debug.Log("sphere 2 was triggered");
                     callColourChange2.changeColour2();
             }
-                else if (lastAction == "spawn tube")
+            */
+            if (lastAction == "spawn tube")
             {
-                Debug.Log("spawn tube called");
+                Debug.Log("spawn tube apartment called");
                 tubeSpawner.spawnTube();
+            }
+            if (lastAction == "spawn tube ministry")
+            {
+                Debug.Log("spawn tube ministry called");
+                tubeSpawnerMinistry.spawnTubeMinistry();
             }
             else if (lastAction == "task complete")
             {
@@ -62,7 +69,7 @@ public class TCPTestClient : MonoBehaviour {
             }
             else
                 {
-                    Debug.Log("last action wasn't recognised");
+                    Debug.Log("last action wasn't a recognised function call");
                 }
             }
         controlState = false;
@@ -125,9 +132,7 @@ public class TCPTestClient : MonoBehaviour {
 			Debug.Log("Socket exception: " + socketException);         
 		}     
 	}  	
-	/// <summary> 	
-	/// Send message to server using socket connection. 	
-	/// </summary> 	
+
 	private void SendMessage(string msgToSend) {
         Debug.Log("Sending Message");
 		if (socketConnection == null) {
@@ -154,13 +159,6 @@ public class TCPTestClient : MonoBehaviour {
 		}     
 	}
 
-[Serializable]
-    public class Player
-    {
-        public string playerId;
-        public string playerLoc;
-        public string playerNick;
-    }
 
     public void NewAction(string action)
     {
@@ -168,8 +166,10 @@ public class TCPTestClient : MonoBehaviour {
         SendMessage(action);
     }
 
+    /*
     private void changeSphereColour()
     {
         callColourChange.changeColour();
     }
+    */
 }

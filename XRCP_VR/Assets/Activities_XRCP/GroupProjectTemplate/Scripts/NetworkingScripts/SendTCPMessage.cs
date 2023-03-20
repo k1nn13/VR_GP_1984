@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SendTCPMessage : MonoBehaviour
 {
-    public TCPTestClient tcpTestClient;
+    public TCPClientApartment tcpTestClient;
     // Call this function every 3 seconds
     void CallFunctionRepeatedly()
     {
