@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 231
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -333,7 +333,7 @@ PrefabInstance:
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 147.05
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -735,6 +735,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 3.6, z: 6.5}
   m_Center: {x: 0, y: 1.65, z: 0}
+--- !u!1 &224416119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2988275007425682375, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2708159934862675698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &224416126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224416119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903dfdee5b7058646af9729a9cd33dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tcpTestClient: {fileID: 276438021}
 --- !u!1 &276437999 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7696548424635294048, guid: 895f6f3c2d334633b5800312285058d2,
@@ -1236,7 +1255,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 872690830}
+      objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1251,7 +1270,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 872690830}
+      objectReference: {fileID: 872690835}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
@@ -1385,7 +1404,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 872690824}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &872690830
+--- !u!114 &872690835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1394,10 +1413,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 364953483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6196fdfea17c13a47aa1e6f6d6cd7572, type: 3}
+  m_Script: {fileID: 11500000, guid: 903dfdee5b7058646af9729a9cd33dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tcpTestClient: {fileID: 0}
+  tcpTestClient: {fileID: 276438021}
 --- !u!1001 &887569235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3656,10 +3675,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8638236484500779106, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 224416126}
+    - target: {fileID: 8638236484500779106, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638236484500779106, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: spawn tube ministry
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1881677403791485959, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4, type: 3}
 --- !u!4 &8306051625431578815 stripped
 Transform:
