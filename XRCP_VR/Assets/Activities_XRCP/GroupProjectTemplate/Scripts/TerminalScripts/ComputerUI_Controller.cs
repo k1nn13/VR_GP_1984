@@ -11,6 +11,9 @@ public class ComputerUI_Controller : MonoBehaviour
     [SerializeField] GameObject pTube;
     [SerializeField] GameObject socketOBJ;
     [SerializeField] GameObject socketOutOBJ;
+    [SerializeField] GameObject tubeOut;
+    static PlaySound playSound;
+    static PlaySoundManager playSoundManager;
 
     [Header("UI Component")]
 
@@ -91,6 +94,15 @@ public class ComputerUI_Controller : MonoBehaviour
 
         // warning message to prompt user on what to do
         messageOutCanvas.SetActive(false);
+
+        //get audio component on tube output
+        playSound = tubeOut.GetComponent<PlaySound>();
+        playSoundManager = GetComponent<PlaySoundManager>();
+    }
+
+    public void RemoveTube()
+    {
+        playSoundManager.TriggerSound(1);
     }
 
 
@@ -104,6 +116,8 @@ public class ComputerUI_Controller : MonoBehaviour
         IXRSelectInteractable objName = socket.GetOldestInteractableSelected();
         tubeMessage = objName.transform.gameObject;
         tubeLog = tubeMessage.GetComponent<TubeLog>();
+
+        playSoundManager.TriggerSound(0);
     }
 
     //------------------------------------------
@@ -134,6 +148,8 @@ public class ComputerUI_Controller : MonoBehaviour
                     // display warning message
                     messageOutCanvas.SetActive(true);
                     warningText.text = "Remove message from P drive and place under output pipe!";
+
+                    playSoundManager.TriggerSound(3);
                 }
 
                 if (!tubeLog.isLogged)
@@ -178,6 +194,7 @@ public class ComputerUI_Controller : MonoBehaviour
 
         if (tubeLogOut.isLogged)
         {
+            playSoundManager.TriggerSound(3);
             launchBtn.interactable = true;
             launchBtn.image.color = new Color(255, 255, 255, 255);
             launchText.color = new Color(255, 255, 255, 255);
@@ -210,10 +227,12 @@ public class ComputerUI_Controller : MonoBehaviour
     //------------------
     void LaunchMessage()
     {
-       
+
         // launches tube
         //Destroy(tubeMessageOut);
         //current.transform.position = end.transform.position;
+        playSoundManager.TriggerSound(2);
+        playSound.TriggerSound();
         tubeCountSent++;
         textSent.text = (tubeCountSent).ToString();
         StartCoroutine(launchCoroutine());
@@ -246,11 +265,13 @@ public class ComputerUI_Controller : MonoBehaviour
     //------------------
     void LogMessage()
     {
+        
         // updates game objects log state
         if (tubeLog != null)
         {
             if (!tubeLog.isLogged)
             {
+                playSoundManager.TriggerSound(2);
                 tubeLog.isLogged = true;
                 updateSocketState(true);
             }
