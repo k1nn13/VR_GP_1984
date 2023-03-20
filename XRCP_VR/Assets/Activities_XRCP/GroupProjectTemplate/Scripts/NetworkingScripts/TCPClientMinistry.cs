@@ -11,7 +11,7 @@ using UnityEngine;
 
 
 
-public class TCPTClientMinistry : MonoBehaviour {
+public class TCPClientMinistry : MonoBehaviour {
 //    public float updateInterval = 3.0f;
 //    private float nextUpdateTime = 0.0f;
     public bool controlState = false;
@@ -54,7 +54,7 @@ public class TCPTClientMinistry : MonoBehaviour {
             if (lastAction == "spawn tube ministry")
             {
                 Debug.Log("spawn tube ministry called");
-                tubeSpawner.spawnTube();
+                tubeSpawnerMinistry.spawnTubeMinistry();
             }
             else if (lastAction == "task complete")
             {

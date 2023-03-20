@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 231
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -333,7 +333,7 @@ PrefabInstance:
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 147.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -741,7 +741,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1255102424}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &276438010
+--- !u!114 &276438021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -750,13 +750,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 276437999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 738e2b9b7fc3ce74abe144bb08a79ddc, type: 3}
+  m_Script: {fileID: 11500000, guid: 442ec0bee8377b04d8ed0363efd7ff59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controlState: 0
-  tubeSpawner: {fileID: 0}
   tubeSpawnerMinistry: {fileID: 64501593}
-  dynamicMessages: {fileID: 0}
+  dynamicMessages: {fileID: 2118861370}
 --- !u!1 &364953483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8784525929467241128, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
@@ -1398,7 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6196fdfea17c13a47aa1e6f6d6cd7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tcpTestClient: {fileID: 276438010}
+  tcpTestClient: {fileID: 0}
 --- !u!1001 &887569235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3184,7 +3183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6196fdfea17c13a47aa1e6f6d6cd7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tcpTestClient: {fileID: 276438010}
+  tcpTestClient: {fileID: 0}
 --- !u!1 &1986593022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,6 +3469,18 @@ Transform:
   m_Father: {fileID: 1395155543}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2118861370 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1158810721755975790, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1863399786}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2132692467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,7 +3593,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tcpTestClient
       value: 
-      objectReference: {fileID: 276438010}
+      objectReference: {fileID: 0}
     - target: {fileID: 6255593267548190272, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
         type: 3}
       propertyPath: m_Name
