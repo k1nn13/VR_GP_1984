@@ -18,7 +18,7 @@ public class TCPClientApartment : MonoBehaviour {
 //    public SphereMaterialChanger callColourChange;
 //    public SphereMaterialChanger2 callColourChange2;
     public TubeSpawner tubeSpawner;
-    public TubeSpawnerMinistry tubeSpawnerMinistry;
+    //public TubeSpawnerMinistry tubeSpawnerMinistry;
     public dynamicText dynamicMessages;
     private string lastAction = "waiting";
     #region private members 	
@@ -56,11 +56,13 @@ public class TCPClientApartment : MonoBehaviour {
                 Debug.Log("spawn tube apartment called");
                 tubeSpawner.spawnTube();
             }
+            /*
             if (lastAction == "spawn tube ministry")
             {
                 Debug.Log("spawn tube ministry called");
                 tubeSpawnerMinistry.spawnTubeMinistry();
             }
+            */
             else if (lastAction == "task complete")
             {
                 Debug.Log("worker completed task");

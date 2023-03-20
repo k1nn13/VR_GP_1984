@@ -17,8 +17,8 @@ public class TCPTClientMinistry : MonoBehaviour {
     public bool controlState = false;
 //    public SphereMaterialChanger callColourChange;
  //   public SphereMaterialChanger2 callColourChange2;
-    public TubeSpawner tubeSpawner;
-  //  public TubeSpawnerMinistry tubeSpawnerMinistry;
+    // public TubeSpawner tubeSpawner;
+    public TubeSpawnerMinistry tubeSpawnerMinistry;
     public dynamicText dynamicMessages;
     private string lastAction = "waiting";
     #region private members 	
@@ -51,9 +51,9 @@ public class TCPTClientMinistry : MonoBehaviour {
                     callColourChange2.changeColour2();
             }
             */
-            if (lastAction == "spawn tube")
+            if (lastAction == "spawn tube ministry")
             {
-                Debug.Log("spawn tube called");
+                Debug.Log("spawn tube ministry called");
                 tubeSpawner.spawnTube();
             }
             else if (lastAction == "task complete")
