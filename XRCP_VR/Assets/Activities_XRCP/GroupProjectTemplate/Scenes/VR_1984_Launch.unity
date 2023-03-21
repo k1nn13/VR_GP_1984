@@ -371,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 3610246571164648352, guid: 9a338fe9445483c439d6bc834f54798e,
         type: 3}
       propertyPath: OnLoad.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: ChangeSound
       objectReference: {fileID: 0}
     - target: {fileID: 3610246571164648352, guid: 9a338fe9445483c439d6bc834f54798e,
         type: 3}
