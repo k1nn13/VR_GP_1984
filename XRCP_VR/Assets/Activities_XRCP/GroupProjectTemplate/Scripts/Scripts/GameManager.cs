@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
+
     }
     private void OnDestroy()
     {
@@ -98,13 +99,13 @@ public class GameManager : MonoBehaviour
     private void HandleMiddle()
     {
         //Maybe there's something specific you need to do in code here.
-        sceneLoader.GoToSceneAsync("VR_1984_Ministry");
+        sceneLoader.GoToSceneAsync("VR_1984_Appartment");
     }
 
     private void HandleEnd()
     {
         //Maybe there's something specific you need to do in code here.
-        sceneLoader.GoToSceneAsync("VR_1984_Appartment");
+        sceneLoader.GoToSceneAsync("VR_1984_Ministry");
     }
 
 

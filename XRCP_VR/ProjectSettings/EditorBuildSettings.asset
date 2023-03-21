@@ -5,15 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Activities_XRCP/GroupProjectTemplate/Scenes/0_StoryExampleScene.unity
     guid: f05aece6d85e66c49af9e0f2785b76da
-  - enabled: 1
+  - enabled: 0
     path: Assets/Activities_XRCP/GroupProjectTemplate/Scenes/1_StoryExampleScene.unity
     guid: 29144926b3388de42a284033db9c82e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Activities_XRCP/YourNameFolder/Scenes/ExampleTeamMateScene.unity
     guid: 9bd2fc838bc534a47a5272cd0574a072
+  - enabled: 1
+    path: Assets/Activities_XRCP/GroupProjectTemplate/Scenes/VR_1984_Launch.unity
+    guid: afcfc910ea76a9147899c0be7fc6ba31
+  - enabled: 1
+    path: Assets/Activities_XRCP/GroupProjectTemplate/Scenes/VR_1984_Appartment.unity
+    guid: d935279a48043a94c8d85a1d7fde6c21
+  - enabled: 1
+    path: Assets/Activities_XRCP/GroupProjectTemplate/Scenes/VR_1984_Ministry.unity
+    guid: b368d5a5b961a904fa47c5bc8aa859f8
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f3d36b094c7e90a48bfeecc8253553a0,
       type: 2}
