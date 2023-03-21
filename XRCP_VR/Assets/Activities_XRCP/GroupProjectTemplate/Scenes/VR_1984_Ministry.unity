@@ -811,7 +811,7 @@ PrefabInstance:
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
@@ -831,6 +831,11 @@ PrefabInstance:
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
@@ -860,6 +865,11 @@ PrefabInstance:
       objectReference: {fileID: 872690835}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 872690840}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -885,6 +895,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: displayMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ComputerUI_Controller, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -905,6 +920,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: dynamicText, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: ComputerUI_Controller, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -912,6 +932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
@@ -930,7 +955,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
+      value: Ready for deployment. Click 'Launch' to send your message.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241135, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
@@ -1009,6 +1044,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tcpTestClient: {fileID: 276438021}
+--- !u!114 &872690840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364953483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textContainer: {fileID: 2118861372}
+  socketStateNow: 0
+  jokes:
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  - Why did the tomato turn red? Because it saw the salad dressing!
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call a fake noodle? An impasta.
+  - "I\u2019m on a whiskey diet. I\u2019ve lost three days already."
+  - "Why don\u2019t oysters give to charity? Because they\u2019re shellfish."
+  - "What\u2019s the difference between a poorly dressed man on a trampoline and
+    a well-dressed man on a trampoline? Attire."
+  - Why was the math book sad? Because it had too many problems.
+  - "What did one hat say to the other? You stay here, I\u2019ll go on ahead."
+  - Why did the coffee file a police report? It got mugged.
+  - "Why do seagulls fly over the sea? Because if they flew over the bay, they\u2019d
+    be bagels."
+  - I told my wife she was drawing her eyebrows too high. She looked surprised.
+  - "Why don\u2019t eggs tell jokes? Because they\u2019d crack each other up."
+  - Why did the scarecrow win an award? Because he was outstanding in his field.
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  currentJoke: 
+  sendTCP: {fileID: 0}
 --- !u!1001 &887569235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1461,6 +1537,53 @@ Transform:
   m_Father: {fileID: 1395155543}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1382751985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1158810721195994780, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1863399786}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1382751991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382751985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textContainer: {fileID: 2118861372}
+  socketStateNow: 0
+  jokes:
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  - Why did the tomato turn red? Because it saw the salad dressing!
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call a fake noodle? An impasta.
+  - "I\u2019m on a whiskey diet. I\u2019ve lost three days already."
+  - "Why don\u2019t oysters give to charity? Because they\u2019re shellfish."
+  - "What\u2019s the difference between a poorly dressed man on a trampoline and
+    a well-dressed man on a trampoline? Attire."
+  - Why was the math book sad? Because it had too many problems.
+  - "What did one hat say to the other? You stay here, I\u2019ll go on ahead."
+  - Why did the coffee file a police report? It got mugged.
+  - "Why do seagulls fly over the sea? Because if they flew over the bay, they\u2019d
+    be bagels."
+  - I told my wife she was drawing her eyebrows too high. She looked surprised.
+  - "Why don\u2019t eggs tell jokes? Because they\u2019d crack each other up."
+  - Why did the scarecrow win an award? Because he was outstanding in his field.
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  currentJoke: 
+  sendTCP: {fileID: 0}
 --- !u!1 &1395155542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,11 +2259,16 @@ PrefabInstance:
     - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
@@ -2150,7 +2278,17 @@ PrefabInstance:
       objectReference: {fileID: 1951926356}
     - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1951926362}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
@@ -2160,8 +2298,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: displayMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.Component, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: dynamicText, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
@@ -2169,6 +2317,57 @@ PrefabInstance:
       value: spawn tube
       objectReference: {fileID: 0}
     - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Message submitted. Await further commands from Big Brother.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1382751991}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: displayMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: dynamicText, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Message has been logged. Remove the tube from the P Drive and place
+        it below the return chute to your right.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
@@ -2203,6 +2402,11 @@ PrefabInstance:
       propertyPath: socketOutOBJ
       value: 
       objectReference: {fileID: 364953483}
+    - target: {fileID: 1158810722350032775, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: Message detected. Click 'Message Logged' to process this message.
+      objectReference: {fileID: 0}
     - target: {fileID: 1158810722354523641, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
       propertyPath: m_RootOrder
@@ -2262,6 +2466,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Work Station Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891327374120288569, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891327374120288570, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761501758486075630, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_Text
+      value: Await Big Brother's commands. When you receive a message, place it in
+        the P Drive on the right.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761501758486075630, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25bd7ee8c4b44274780ee40d2290f44b, type: 3}
@@ -2333,6 +2558,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tcpTestClient: {fileID: 276438021}
+--- !u!114 &1951926362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951926344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textContainer: {fileID: 2118861372}
+  socketStateNow: 0
+  jokes:
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  - Why did the tomato turn red? Because it saw the salad dressing!
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call a fake noodle? An impasta.
+  - "I\u2019m on a whiskey diet. I\u2019ve lost three days already."
+  - "Why don\u2019t oysters give to charity? Because they\u2019re shellfish."
+  - "What\u2019s the difference between a poorly dressed man on a trampoline and
+    a well-dressed man on a trampoline? Attire."
+  - Why was the math book sad? Because it had too many problems.
+  - "What did one hat say to the other? You stay here, I\u2019ll go on ahead."
+  - Why did the coffee file a police report? It got mugged.
+  - "Why do seagulls fly over the sea? Because if they flew over the bay, they\u2019d
+    be bagels."
+  - I told my wife she was drawing her eyebrows too high. She looked surprised.
+  - "Why don\u2019t eggs tell jokes? Because they\u2019d crack each other up."
+  - Why did the scarecrow win an award? Because he was outstanding in his field.
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  currentJoke: 
+  sendTCP: {fileID: 0}
 --- !u!1 &1986593022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,6 +2863,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2118861372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7761501758486075630, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1863399786}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2708159934862675698
