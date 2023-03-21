@@ -352,7 +352,7 @@ Transform:
   - {fileID: 86596190}
   - {fileID: 23188171}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &66899334
 GameObject:
@@ -1580,7 +1580,6 @@ MonoBehaviour:
   controlState: 0
   tubeSpawner: {fileID: 8211974571247965372, guid: cb63e326dbe336f4091e68e83ab16819,
     type: 3}
-  tubeSpawnerMinistry: {fileID: 0}
   dynamicMessages: {fileID: 1930339049}
 --- !u!1001 &448334148
 PrefabInstance:
@@ -1913,7 +1912,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1930339049}
+      objectReference: {fileID: 516854239}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1941,6 +1940,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: displayMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
       value: SendMessage
       objectReference: {fileID: 0}
@@ -1953,6 +1957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Ready for deployment. Click 'Launch' to send your message.
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
@@ -2040,6 +2049,116 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tcpTestClient: {fileID: 382021208}
+--- !u!114 &516854239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27503923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textContainer: {fileID: 1158810722074063497}
+  socketStateNow: 0
+  jokes:
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  - Why did the tomato turn red? Because it saw the salad dressing!
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call a fake noodle? An impasta.
+  - "I\u2019m on a whiskey diet. I\u2019ve lost three days already."
+  - "Why don\u2019t oysters give to charity? Because they\u2019re shellfish."
+  - "What\u2019s the difference between a poorly dressed man on a trampoline and
+    a well-dressed man on a trampoline? Attire."
+  - Why was the math book sad? Because it had too many problems.
+  - "What did one hat say to the other? You stay here, I\u2019ll go on ahead."
+  - Why did the coffee file a police report? It got mugged.
+  - "Why do seagulls fly over the sea? Because if they flew over the bay, they\u2019d
+    be bagels."
+  - I told my wife she was drawing her eyebrows too high. She looked surprised.
+  - "Why don\u2019t eggs tell jokes? Because they\u2019d crack each other up."
+  - Why did the scarecrow win an award? Because he was outstanding in his field.
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  currentJoke: 
+  sendTCP: {fileID: 0}
+--- !u!1001 &545003268
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5853539463556112034, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_Name
+      value: TubeMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.77030236
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.934
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516747746774238232, guid: 5d410415341d4f14b9a267787007c802,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d410415341d4f14b9a267787007c802, type: 3}
 --- !u!1 &581806551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,7 +2323,7 @@ Transform:
   - {fileID: 1013805840}
   - {fileID: 1280595039}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &606253582 stripped
 Transform:
@@ -4587,7 +4706,7 @@ Transform:
   m_Children:
   - {fileID: 1815318737}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1548568897
 PrefabInstance:
@@ -5449,7 +5568,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1903512000
 GameObject:
@@ -5828,6 +5947,11 @@ PrefabInstance:
       propertyPath: tcpTestClient
       value: 
       objectReference: {fileID: 382021208}
+    - target: {fileID: 2988275007425682375, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6255593267548190272, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
         type: 3}
       propertyPath: m_Name
@@ -5836,7 +5960,7 @@ PrefabInstance:
     - target: {fileID: 6255593267548190285, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6255593267548190285, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
         type: 3}
@@ -6625,11 +6749,92 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 52999420}
     m_Modifications:
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1158810722074063500}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: displayMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: dynamicText, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Message submitted. Await further commands.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810720831801358, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1158810721174736739, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
       propertyPath: tcpTestClient
       value: 
       objectReference: {fileID: 382021208}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1158810722074063498}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: displayMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: dynamicText, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Message logged. Remove tube and place it below the return chute to your
+        right.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158810721195994778, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1158810722275551692, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
       propertyPath: end
@@ -6665,6 +6870,11 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 724920915}
+    - target: {fileID: 1158810722350032775, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: Messaged detected. Click 'Message Logged' to process it.
+      objectReference: {fileID: 0}
     - target: {fileID: 1158810722354523641, guid: 25bd7ee8c4b44274780ee40d2290f44b,
         type: 3}
       propertyPath: m_RootOrder
@@ -6730,8 +6940,130 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1891327374120288569, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761501758486075630, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_Text
+      value: Await commands from Big Brother. Place the messages into the P Drive
+        to process them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761501758486075630, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25bd7ee8c4b44274780ee40d2290f44b, type: 3}
+--- !u!1 &1158810722074063496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1158810721195994780, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1158810722074063495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1158810722074063497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7761501758486075630, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1158810722074063495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1158810722074063498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158810722074063496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textContainer: {fileID: 1158810722074063497}
+  socketStateNow: 0
+  jokes:
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  - Why did the tomato turn red? Because it saw the salad dressing!
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call a fake noodle? An impasta.
+  - "I\u2019m on a whiskey diet. I\u2019ve lost three days already."
+  - "Why don\u2019t oysters give to charity? Because they\u2019re shellfish."
+  - "What\u2019s the difference between a poorly dressed man on a trampoline and
+    a well-dressed man on a trampoline? Attire."
+  - Why was the math book sad? Because it had too many problems.
+  - "What did one hat say to the other? You stay here, I\u2019ll go on ahead."
+  - Why did the coffee file a police report? It got mugged.
+  - "Why do seagulls fly over the sea? Because if they flew over the bay, they\u2019d
+    be bagels."
+  - I told my wife she was drawing her eyebrows too high. She looked surprised.
+  - "Why don\u2019t eggs tell jokes? Because they\u2019d crack each other up."
+  - Why did the scarecrow win an award? Because he was outstanding in his field.
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  currentJoke: 
+  sendTCP: {fileID: 0}
+--- !u!1 &1158810722074063499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1158810722493776532, guid: 25bd7ee8c4b44274780ee40d2290f44b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1158810722074063495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1158810722074063500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158810722074063499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textContainer: {fileID: 1158810722074063497}
+  socketStateNow: 0
+  jokes:
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  - Why did the tomato turn red? Because it saw the salad dressing!
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - "Why don\u2019t scientists trust atoms? Because they make up everything."
+  - What do you call a fake noodle? An impasta.
+  - "I\u2019m on a whiskey diet. I\u2019ve lost three days already."
+  - "Why don\u2019t oysters give to charity? Because they\u2019re shellfish."
+  - "What\u2019s the difference between a poorly dressed man on a trampoline and
+    a well-dressed man on a trampoline? Attire."
+  - Why was the math book sad? Because it had too many problems.
+  - "What did one hat say to the other? You stay here, I\u2019ll go on ahead."
+  - Why did the coffee file a police report? It got mugged.
+  - "Why do seagulls fly over the sea? Because if they flew over the bay, they\u2019d
+    be bagels."
+  - I told my wife she was drawing her eyebrows too high. She looked surprised.
+  - "Why don\u2019t eggs tell jokes? Because they\u2019d crack each other up."
+  - Why did the scarecrow win an award? Because he was outstanding in his field.
+  - "What\u2019s orange and sounds like a parrot? A carrot."
+  - What do you call an alligator in a vest? An investigator.
+  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
+    to put it down."
+  currentJoke: 
+  sendTCP: {fileID: 0}
 --- !u!1001 &8211974572846337720
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -956,7 +956,7 @@ PrefabInstance:
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
-      value: Ready for deployment. Click 'Launch' to send your message.
+      value: Message ready for deployment. Click 'Launch' to send your message.
       objectReference: {fileID: 0}
     - target: {fileID: 8784525929467241134, guid: 3a5987bbf56f0d14e927e4cecef2e45b,
         type: 3}
@@ -2893,6 +2893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TCPTrigger_SpawnTube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255593267548190272, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6255593267548190285, guid: 9a2fb3df8badd9c4b8a069c1f817c9f4,
         type: 3}
