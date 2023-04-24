@@ -23,7 +23,7 @@ public class ComputerUI_Controller : MonoBehaviour
     [SerializeField] GameObject messageLoggedOBJ;
     [SerializeField] GameObject messageOutCanvas;
     [SerializeField] Button btn_0, logBtn, launchBtn;
-    [SerializeField] TMP_Text warningText, launchText;
+    [SerializeField] TMP_Text warningText, launchText, logText;
     [SerializeField] Transform current, start, end;
 
     [Header("Public Values")]
@@ -87,6 +87,7 @@ public class ComputerUI_Controller : MonoBehaviour
         // Display button to update message log on tube
         logBtn.interactable = false;
         logBtn.image.color = new Color(0,0,0,0);
+        logText.color = new Color(0, 0, 0, 0);
 
         launchBtn.interactable = false;
         launchBtn.image.color = new Color(0, 0, 0, 0);
@@ -144,6 +145,7 @@ public class ComputerUI_Controller : MonoBehaviour
                     // hide button to log message
                     logBtn.interactable = false;
                     logBtn.image.color = new Color(255, 255, 255, 0);
+                    logText.color = new Color(255, 255, 255, 0);
 
                     // display warning message
                     messageOutCanvas.SetActive(true);
@@ -160,6 +162,7 @@ public class ComputerUI_Controller : MonoBehaviour
                     // displays button allowing user to log message
                     logBtn.interactable = true;
                     logBtn.image.color = new Color(255, 255, 255, 255);
+                    logText.color = new Color(255, 255, 255, 255);
                 }
             }
 
@@ -175,7 +178,7 @@ public class ComputerUI_Controller : MonoBehaviour
 
             logBtn.interactable = false;
             logBtn.image.color = new Color(0, 0, 0, 0);
-
+            logText.color = new Color(255, 255, 255, 0);
             messageOutCanvas.SetActive(false);
         }
 
@@ -236,6 +239,9 @@ public class ComputerUI_Controller : MonoBehaviour
         tubeCountSent++;
         textSent.text = (tubeCountSent).ToString();
         StartCoroutine(launchCoroutine());
+
+        // for testing
+        ts.spawnTube();
 
     }
 
