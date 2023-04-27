@@ -5,7 +5,7 @@ using UnityEngine;
 public class TubeScript : MonoBehaviour
 {
     Rigidbody rb;
-    bool trigger = true;
+    //bool trigger = true;
     
 
     // Start is called before the first frame update

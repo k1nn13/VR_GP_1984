@@ -5,15 +5,17 @@ using UnityEngine.Rendering;
 
 public class PlaySound : MonoBehaviour
 {
-    [SerializeField] AudioClip clip;
     AudioSource source;
+    [SerializeField] AudioClip clip;
     [SerializeField] float volume;
 
+    //-----------------
     private void Start()
     {
         source = GetComponent<AudioSource>();
     }
 
+    //-----------------
     public void TriggerSound()
     {
         if (!source.isPlaying)

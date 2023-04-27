@@ -18,7 +18,7 @@ public class TubeSpawnerMinistry : MonoBehaviour
 
 
     static PlaySound playSound;
-    static bool canTriggerSound = false;
+    //static bool canTriggerSound = false;
 
 
 
@@ -32,17 +32,7 @@ public class TubeSpawnerMinistry : MonoBehaviour
         tubeCount = 0;
     }
 
-    private void Update()
-    {
-        //if (canTriggerSound)
-        //{
-        //    playSound.TriggerSound();
-        //}
-
-
-
-    }
-
+    //----------------------
     public void AudioTrigger()
     {
    
@@ -54,7 +44,7 @@ public class TubeSpawnerMinistry : MonoBehaviour
     {
         uiTest = FindObjectOfType<ComputerUI_Controller>();
         playSound.TriggerSound();
-        canTriggerSound = true;
+        //canTriggerSound = true;
 
         //obj = Instantiate(prefab, startPosition.transform.position, Quaternion.Euler(-90f, 0f, 0f));
         //var component = obj.AddComponent<CustomComponent>();

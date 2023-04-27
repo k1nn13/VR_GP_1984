@@ -29,5 +29,7 @@ public class TubeCollision : MonoBehaviour
             playSound.TriggerSound();
         }
 
+        //Debug.Log(collision.gameObject.name);
+
     }
 }

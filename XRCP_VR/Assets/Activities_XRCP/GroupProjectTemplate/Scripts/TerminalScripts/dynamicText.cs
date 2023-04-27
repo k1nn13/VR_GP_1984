@@ -33,7 +33,7 @@ public class dynamicText : MonoBehaviour
 
     // Variable to store the random joke
     public string currentJoke;
-    public SendTCPMessage sendTCP;
+   // public SendTCPMessage sendTCP;
 
 
     void Start()
@@ -58,7 +58,7 @@ public class dynamicText : MonoBehaviour
         if (socketStateNow == true)
         {
             textContainer.text = "Task completed";
-            sendTCP.SendMessage("task complete");
+            //sendTCP.SendMessage("task complete");
 
         } else
         {

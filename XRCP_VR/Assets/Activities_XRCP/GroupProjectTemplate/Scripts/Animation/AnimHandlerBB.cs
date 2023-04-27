@@ -5,11 +5,11 @@ using UnityEngine;
 public class AnimHandlerBB : MonoBehaviour
 {
     Animator animator;
-    int isSittingHash, canTransitionHash, routeHash;
+    int isSittingHash, canTransitionHash;
 
     [SerializeField] bool isSitting, canTransition;
 
-    [SerializeField] float randomRoute;
+
     
     //---------------
     void Start()
@@ -25,12 +25,6 @@ public class AnimHandlerBB : MonoBehaviour
         animator.SetBool(canTransitionHash, canTransition);
 
 
-        routeHash = Animator.StringToHash("StartRoute");
-        animator.SetInteger(routeHash, 1);
-
-        randomRoute = Mathf.Round(Random.Range(0, 1));
-
-        //Random.Range(0, 1);
 
     }
 

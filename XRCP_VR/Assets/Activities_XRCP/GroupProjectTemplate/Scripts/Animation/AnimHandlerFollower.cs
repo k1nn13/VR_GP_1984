@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimHandlerFollower
-    : MonoBehaviour
+public class AnimHandlerFollower : MonoBehaviour
 {
-    Animator animator;
-    int isSittingHash, canTransitionHash;
 
     [SerializeField] bool isSitting, canTransition;
-
     [SerializeField] int randomRoute, randomRoute1;
 
+    Animator animator;
+    int  canTransitionHash;
     bool setRoute;
     //---------------
     void Start()
@@ -21,26 +19,16 @@ public class AnimHandlerFollower
         // Get animator component
         animator = GetComponent<Animator>();
 
-        // set animator hash and start logic
-        isSittingHash = Animator.StringToHash("isSitting");
-        animator.SetBool(isSittingHash, isSitting);
+
 
         canTransitionHash = Animator.StringToHash("canTransition");
         animator.SetBool(canTransitionHash, canTransition);
 
-
-
-
         randomRoute = (int)Mathf.Round(Random.Range(0, 3));
         animator.SetInteger("StartRoute", randomRoute);
 
-
-
         randomRoute1 = (int)Mathf.Round(Random.Range(0, 4));
         animator.SetInteger("Route", randomRoute1);
-
-
-        //Random.Range(0, 1);
 
     }
 
