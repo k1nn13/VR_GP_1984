@@ -9,6 +9,7 @@ public class PlaySound : MonoBehaviour
     [SerializeField] AudioClip clip;
     [SerializeField] float volume;
 
+
     //-----------------
     private void Start()
     {
@@ -18,10 +19,15 @@ public class PlaySound : MonoBehaviour
     //-----------------
     public void TriggerSound()
     {
-        if (!source.isPlaying)
+        if (source != null)
         {
-            source.PlayOneShot(clip, volume);
+            if (!source.isPlaying)
+            {
+
+                source.PlayOneShot(clip, volume);
+            }
         }
+
     }
 
 }

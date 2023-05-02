@@ -183,7 +183,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 689505353191063169}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &689505352968616958
 GameObject:
@@ -414,6 +414,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6865470645840239096}
   - {fileID: 1016445766929914269}
   - {fileID: 689505352665935715}
   m_Father: {fileID: 689505353194435840}
@@ -949,7 +950,7 @@ PrefabInstance:
         type: 3}
       propertyPath: logText
       value: 
-      objectReference: {fileID: 689505352774989173}
+      objectReference: {fileID: 0}
     - target: {fileID: 940505163276082008, guid: 148c8ad730409a541a056ecfa20332cf,
         type: 3}
       propertyPath: tubeOut
@@ -1119,7 +1120,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1839000548787394804}
+      objectReference: {fileID: 0}
     - target: {fileID: 940505164368124942, guid: 148c8ad730409a541a056ecfa20332cf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -1234,18 +1235,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 940505164321717751, guid: 148c8ad730409a541a056ecfa20332cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 148c8ad730409a541a056ecfa20332cf, type: 3}
---- !u!114 &689505352774989173 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 940505164031368984, guid: 148c8ad730409a541a056ecfa20332cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 332357083378788973}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &689505353667528855 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 940505164936504058, guid: 148c8ad730409a541a056ecfa20332cf,
@@ -1256,65 +1245,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &689505354051335781 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 940505164368124936, guid: 148c8ad730409a541a056ecfa20332cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 332357083378788973}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1839000548787394804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689505354051335781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4e19b54430b954685bcf8f7f876802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textContainer: {fileID: 8228945113294389271}
-  socketStateNow: 0
-  jokes:
-  - "Why don\u2019t scientists trust atoms? Because they make up everything."
-  - What do you call an alligator in a vest? An investigator.
-  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
-    to put it down."
-  - Why did the tomato turn red? Because it saw the salad dressing!
-  - "What\u2019s orange and sounds like a parrot? A carrot."
-  - "Why don\u2019t scientists trust atoms? Because they make up everything."
-  - What do you call a fake noodle? An impasta.
-  - "I\u2019m on a whiskey diet. I\u2019ve lost three days already."
-  - "Why don\u2019t oysters give to charity? Because they\u2019re shellfish."
-  - "What\u2019s the difference between a poorly dressed man on a trampoline and
-    a well-dressed man on a trampoline? Attire."
-  - Why was the math book sad? Because it had too many problems.
-  - "What did one hat say to the other? You stay here, I\u2019ll go on ahead."
-  - Why did the coffee file a police report? It got mugged.
-  - "Why do seagulls fly over the sea? Because if they flew over the bay, they\u2019d
-    be bagels."
-  - I told my wife she was drawing her eyebrows too high. She looked surprised.
-  - "Why don\u2019t eggs tell jokes? Because they\u2019d crack each other up."
-  - Why did the scarecrow win an award? Because he was outstanding in his field.
-  - "What\u2019s orange and sounds like a parrot? A carrot."
-  - What do you call an alligator in a vest? An investigator.
-  - "I\u2019m reading a book on the history of glue \u2013 I just can\u2019t seem
-    to put it down."
-  currentJoke: 
-  sendTCP: {fileID: 0}
---- !u!114 &8228945113294389271 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8552283993712224890, guid: 148c8ad730409a541a056ecfa20332cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 332357083378788973}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &689505353463506007
@@ -1517,7 +1447,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 28d6f0f1965597b41b2e9caf8428604b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28d6f0f1965597b41b2e9caf8428604b,
         type: 3}
@@ -1647,3 +1577,98 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1729208046285015087, guid: 28d6f0f1965597b41b2e9caf8428604b, type: 3}
+--- !u!1001 &2616277004023984017
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 689505353191063169}
+    m_Modifications:
+    - target: {fileID: 8089097782331370707, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_Name
+      value: TubeInputPowerCable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.014999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.014999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.014999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1966
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1414a3a9599ef64a8bfc9395023ecc0, type: 3}
+--- !u!4 &6865470645840239096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8865880398135211625, guid: f1414a3a9599ef64a8bfc9395023ecc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2616277004023984017}
+  m_PrefabAsset: {fileID: 0}

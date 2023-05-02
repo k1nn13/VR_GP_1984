@@ -21,7 +21,11 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
     static PlaySoundManager playSoundManager;
 
     int tubeCount;
-    int tubeCountSent;
+    public int tubeCountSent;
+
+    public bool canLogMessage;
+    public bool canLaunchMessage;
+
 
     //----------------------
     [Header("UI Component")]
@@ -68,7 +72,10 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
     GameObject tubeMessageOut;
     TubeLog tubeLogOut;
 
-    //--------------- START
+
+
+    //---------------
+    //--------- START
     void Start()
     {
         // Access TMP variables on Game Object
@@ -77,10 +84,6 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
 
         // Get Access to number of tubes spawned
         ts = tubeIn.GetComponent<TubeSpawner>();
-
-        // Listen to when ui button is pressed
-        //logBtn.onClick.AddListener(LogMessage);
-        //launchBtn.onClick.AddListener(LaunchMessage);
 
         // access input detected tmp to change colour
         inputDetected = inputDetectedOBJ.GetComponent<TextMeshProUGUI>();
@@ -98,11 +101,6 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
         tubeCount = 0;
         tubeCountSent = 0;
 
-        // Display button to update message log on tube
-        //logBtn.interactable = false;
-        //logBtn.image.color = new Color(0,0,0,0);
-        //logText.color = new Color(0, 0, 0, 0);
-
         launchBtn.interactable = false;
         launchBtn.image.color = new Color(0, 0, 0, 0);
         launchText.color = new Color(0, 0, 0, 0);
@@ -113,6 +111,9 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
         //get audio component on tube output
         playSound = tubeOut.GetComponent<PlaySound>();
         playSoundManager = GetComponent<PlaySoundManager>();
+
+        canLogMessage = true;
+        canLaunchMessage = true;
     }
 
     //---------------------
@@ -147,40 +148,51 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
         {
             // set input detected colour -> Yellow
             inputDetected.color = new Color(255, 255, 0, 255);
-
-            if (tubeLogIn != null)
+            if (tubeLogOut == null)
             {
-                if (tubeLogIn.isLogged)
+                if (canLogMessage)
                 {
-                    // if message logged change color to green
-                    messageLogged.color = new Color(0, 255, 0, 255);
+                    if (tubeLogIn != null)
+                    {
+                        if (tubeLogIn.isLogged)
+                        {
+                            launchBtn.onClick.RemoveListener(LogMessage);
+                            launchBtn.onClick.RemoveListener(LaunchMessage);
 
-                    launchBtn.interactable = false;
-                    launchBtn.image.color = new Color(255, 255, 255, 0);
-                    launchText.color = new Color(255, 255, 255, 0);
+                            // if message logged change color to green
+                            messageLogged.color = new Color(0, 255, 0, 255);
 
-                    // display warning message
-                    messageOutOBJ.SetActive(true);
-                    warningText.text = "Remove message from P drive and place under output pipe!";
+                            launchBtn.interactable = false;
+                            launchBtn.image.color = new Color(255, 255, 255, 0);
+                            launchText.color = new Color(255, 255, 255, 0);
 
-                    // Trigger Sound
-                    playSoundManager.TriggerSound(3);
+                            // display warning message
+                            messageOutOBJ.SetActive(true);
+                            warningText.text = "Remove message from P drive and place under output pipe!";
+
+                            // Trigger Sound
+                            playSoundManager.TriggerSound(3);
+                        }
+
+                        if (!tubeLogIn.isLogged)
+                        {
+                            // displays message red - not logged
+                            messageLogged.color = new Color(255, 0, 0, 255);
+
+                            //--------------------------
+                            // Listen to when ui button is pressed
+                            launchBtn.onClick.AddListener(LogMessage);
+                            launchBtn.onClick.RemoveListener(LaunchMessage);
+                            launchBtn.interactable = true;
+                            launchBtn.image.color = new Color(255, 255, 255, 255);
+                            launchText.color = new Color(255, 255, 255, 255);
+                            launchText.text = "Log Message";
+                        }
+                    }
                 }
 
-                if (!tubeLogIn.isLogged)
-                {
-                    // displays message red - not logged
-                    messageLogged.color = new Color(255, 0, 0, 255);
-
-                    //--------------------------
-                    // Listen to when ui button is pressed
-                    launchBtn.onClick.AddListener(LogMessage);
-                    launchBtn.interactable = true;
-                    launchBtn.image.color = new Color(255, 255, 255, 255);
-                    launchText.color = new Color(255, 255, 255, 255);
-                    launchText.text = "Log Message";
-                }
             }
+            
         }
 
         //-----------------
@@ -215,7 +227,8 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
 
             // Listen to when ui button is pressed
             // update listener event 
-            launchBtn.onClick.AddListener(LaunchMessage); 
+            launchBtn.onClick.AddListener(LaunchMessage);
+            launchBtn.onClick.RemoveListener(LogMessage);
             launchBtn.interactable = true;
             launchBtn.image.color = new Color(255, 255, 255, 255);
             launchText.color = new Color(255, 255, 255, 255);
@@ -247,16 +260,20 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
     void LaunchMessage()
     {
         // launches tube
+        EventManager.OnMessageLaunched(); // trigger event to update game state
+
         playSoundManager.TriggerSound(2);
         playSound.TriggerSound();
         tubeCountSent++;
         textSent.text = (tubeCountSent).ToString();
+        launchBtn.onClick.RemoveListener(LaunchMessage);
         StartCoroutine(launchCoroutine());
     }
 
     //---------------------------
     IEnumerator launchCoroutine()
     {
+        // launches the meesage up the pipe
         Vector3 startPos = start.transform.position;
         Vector3 endPos = end.transform.position;
 
@@ -271,6 +288,7 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
             yield return new WaitForEndOfFrame();
 
         }
+
         Destroy(tubeMessageOut);
         current.transform.position = start.transform.position;
     }
@@ -297,7 +315,5 @@ public class ComputerUI_Controller_V2 : MonoBehaviour
         tubeCount++;    
         textRecieved.text = (tubeCount).ToString();
     }
-
-
 
 }

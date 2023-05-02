@@ -7,6 +7,13 @@ TagManager:
   - UI
   - Mute
   - BigBrother
+  - PuzzleButton
+  - PuzzleBorder
+  - PuzzleBorderTop
+  - PuzzleBorderBottom
+  - PuzzleBorderLeft
+  - PuzzleBorderRight
+  - WirePuzzle
   layers:
   - Default
   - TransparentFX
@@ -15,7 +22,7 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
+  - PipeCollider
   - 
   - 
   - 

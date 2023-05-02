@@ -10,7 +10,7 @@ public class TubeSpawner : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] GameObject obj;
-    ComputerUI_Controller ui, uiTest;
+    ComputerUI_Controller_V2 ui, uiTest;
 
     [Header("Output")]
     public bool canSpawnTube = false;
@@ -22,7 +22,7 @@ public class TubeSpawner : MonoBehaviour
     //--------------------
     void Start()
     {
-        ui = obj.GetComponent<ComputerUI_Controller>();
+        ui = obj.GetComponent<ComputerUI_Controller_V2>();
         playSound = gameObject.GetComponent<PlaySound>();
 
         tubeCount = 0;
@@ -31,7 +31,7 @@ public class TubeSpawner : MonoBehaviour
     //---------------------
     public void spawnTube()
     {
-        uiTest = FindObjectOfType<ComputerUI_Controller>();
+        uiTest = FindObjectOfType<ComputerUI_Controller_V2>();
         playSound.TriggerSound();
         //canTriggerSound = true;
 
@@ -43,7 +43,7 @@ public class TubeSpawner : MonoBehaviour
         //ui.UpdateTubeCount();
         tubeCount += 1;
         //Debug.Log("tube created with unique id: " + obj.GetComponent<CustomComponent>().uniqueValue);
-        Debug.Log("tube count is " + tubeCount);
+        //Debug.Log("tube count is " + tubeCount);
 
         uiTest.UpdateTubeCount();
 

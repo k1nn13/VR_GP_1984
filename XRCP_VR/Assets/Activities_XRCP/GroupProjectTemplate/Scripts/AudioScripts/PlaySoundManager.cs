@@ -5,9 +5,9 @@ using UnityEngine.Rendering;
 
 public class PlaySoundManager : MonoBehaviour
 {
-    [SerializeField] AudioClip clip;
-    [SerializeField] AudioClip[] clipArray;
+    AudioClip clip;
     AudioSource source;
+    [SerializeField] AudioClip[] clipArray;
     [SerializeField] float volume;
 
     private void Start()

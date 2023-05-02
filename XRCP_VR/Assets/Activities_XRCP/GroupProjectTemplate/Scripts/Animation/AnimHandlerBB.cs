@@ -6,11 +6,8 @@ public class AnimHandlerBB : MonoBehaviour
 {
     Animator animator;
     int isSittingHash, canTransitionHash;
-
     [SerializeField] bool isSitting, canTransition;
 
-
-    
     //---------------
     void Start()
     {  
@@ -23,20 +20,12 @@ public class AnimHandlerBB : MonoBehaviour
 
         canTransitionHash = Animator.StringToHash("canTransition");
         animator.SetBool(canTransitionHash, canTransition);
-
-
-
     }
 
     //-----------------
-    void Update()
-    {
-    
-    }
-
     public void TriggerAnimation()
     {
         animator.SetBool(isSittingHash, true);
-        Debug.Log("triggered");
+        //Debug.Log("triggered");
     }
 }
